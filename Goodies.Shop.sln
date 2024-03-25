@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobi", "Mobi", "{442E2218-A322-4F66-A900-9329F03933F9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{E7D07D52-AA01-44D6-B1D1-19CD60DE5BB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6ED5F42E-7D51-40DE-9C20-ADF8B6AD3894}"
@@ -15,25 +13,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{492A3D02
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{76E03D96-58F0-46EA-805A-6C10570CE0A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.Model", "Goodies.Shop.Model\Goodies.Shop.Model.csproj", "{A1A2F60F-6673-45B3-BE87-1F717A0A81AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodies.Shop.Model", "Goodies.Shop.Model\Goodies.Shop.Model.csproj", "{A1A2F60F-6673-45B3-BE87-1F717A0A81AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.Api", "Goodies.Shop.Api\Goodies.Shop.Api.csproj", "{3ED7D67E-5BDA-4D65-AEDD-C7351776AC93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodies.Shop.Api", "Goodies.Shop.Api\Goodies.Shop.Api.csproj", "{3ED7D67E-5BDA-4D65-AEDD-C7351776AC93}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{4B70A11D-CD84-44CC-B4A1-34F22703F709}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWT", "JWT", "{038C95B3-E8EF-402C-A1A8-D03EB8FA1111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.Jwt", "Goodies.Shop.Jwt\Goodies.Shop.Jwt.csproj", "{43ACB1A6-D2D5-40DB-8815-C2BF9C9376A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodies.Shop.Jwt", "Goodies.Shop.Jwt\Goodies.Shop.Jwt.csproj", "{43ACB1A6-D2D5-40DB-8815-C2BF9C9376A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ozow", "Ozow", "{68205B36-8ECC-4AF6-A875-8814574EBC85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PayPal", "PayPal", "{190D14EF-192E-44CE-891B-3990EDFAC1B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.RedisCache", "Goodies.Shop.RedisCache\Goodies.Shop.RedisCache.csproj", "{5155EE7F-141A-458B-83C0-E327DC881D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodies.Shop.RedisCache", "Goodies.Shop.RedisCache\Goodies.Shop.RedisCache.csproj", "{5155EE7F-141A-458B-83C0-E327DC881D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.Database", "Goodies.Shop.Database\Goodies.Shop.Database.csproj", "{286A8D1D-C52C-4B19-8AE3-180429F69B48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodies.Shop.Database", "Goodies.Shop.Database\Goodies.Shop.Database.csproj", "{286A8D1D-C52C-4B19-8AE3-180429F69B48}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EA04466D-D3DD-4BDB-A302-877FB33F1DF4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Goodies.Shop.MSDatabase", "Goodies.Shop.MSDatabase\Goodies.Shop.MSDatabase.sqlproj", "{E107F918-ACC3-43EB-9293-48E1832DEA32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounting", "Accounting", "{9F7F4176-D2B4-439A-B2FF-D5017424AF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodies.Shop.Tests", "Goodies.Shop.Tests\Goodies.Shop.Tests.csproj", "{E7935B6A-A72B-42DE-A015-4B6FCD399781}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +65,16 @@ Global
 		{286A8D1D-C52C-4B19-8AE3-180429F69B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{286A8D1D-C52C-4B19-8AE3-180429F69B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{286A8D1D-C52C-4B19-8AE3-180429F69B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E107F918-ACC3-43EB-9293-48E1832DEA32}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E7935B6A-A72B-42DE-A015-4B6FCD399781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7935B6A-A72B-42DE-A015-4B6FCD399781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7935B6A-A72B-42DE-A015-4B6FCD399781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7935B6A-A72B-42DE-A015-4B6FCD399781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +88,8 @@ Global
 		{190D14EF-192E-44CE-891B-3990EDFAC1B5} = {76E03D96-58F0-46EA-805A-6C10570CE0A1}
 		{5155EE7F-141A-458B-83C0-E327DC881D8C} = {DD064835-227E-4435-BD5F-F31A17BD8CA4}
 		{286A8D1D-C52C-4B19-8AE3-180429F69B48} = {6ED5F42E-7D51-40DE-9C20-ADF8B6AD3894}
+		{E107F918-ACC3-43EB-9293-48E1832DEA32} = {6ED5F42E-7D51-40DE-9C20-ADF8B6AD3894}
+		{E7935B6A-A72B-42DE-A015-4B6FCD399781} = {EA04466D-D3DD-4BDB-A302-877FB33F1DF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B994E541-75B0-40B9-91E4-65954C1C3D91}

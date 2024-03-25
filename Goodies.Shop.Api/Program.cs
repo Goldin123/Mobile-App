@@ -1,6 +1,18 @@
+using Goodies.Shop.Database.Context;
+using Goodies.Shop.Database.Repository.Implementation;
+using Goodies.Shop.Database.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<GoodiesContext>(options =>
+          options.UseSqlServer(builder.Configuration.GetConnectionString("GoodiesDB")));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
