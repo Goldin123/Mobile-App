@@ -11,7 +11,7 @@
 	[PostalAddress4] [varchar](150) NULL,
 	[PostalAddressCode] [varchar](50) NULL,
 	[City] [varchar](50) NULL,
-	[Pronvince] [varchar](50) NULL,
+	[Province] [varchar](50) NULL,
 	[Country] [varchar](50) NULL,
 	[Telephone] [varchar](50) NULL,
 	[DateCreated] [datetime] NULL,

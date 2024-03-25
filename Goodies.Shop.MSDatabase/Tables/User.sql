@@ -9,7 +9,7 @@
 	[UserAddressID] [int] NULL,
 	[DateCreated] [datetime] NULL,
 	[DateModified] [datetime] NULL,
-	[DateLasteOrdered] [datetime] NULL,
+	[DateLastOrdered] [datetime] NULL,
 	[IsApproved] [bit] NULL,
 	[IsAdmin] [bit] NULL,
  CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
