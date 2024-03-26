@@ -63,4 +63,7 @@
     <Build Include="Tables\UserType.sql" />
     <Build Include="Tables\UserAddress.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Run_Me_First.sql" />
+  </ItemGroup>
 </Project>

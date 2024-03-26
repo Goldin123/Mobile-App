@@ -1,6 +1,8 @@
 ﻿using Goodies.Shop.Database.Context;
 using Goodies.Shop.Database.Entities;
 using Goodies.Shop.Database.Repository.Interface;
+using Goodies.Shop.Model.ApiRequest;
+using Goodies.Shop.Model.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -33,6 +35,36 @@ namespace Goodies.Shop.Database.Repository.Implementation
                 _logger.LogError(string.Format("{0} - {1} - {2}.", DateTime.Now, nameof(GetUsersAsync), ex.Message));
                 throw new ArgumentException(ex.Message);
             }    
+        }
+
+        public async Task<User> AddCustomerUserAsync(AddNewUserRequest addNewUserRequest) 
+        {
+            try 
+            {
+                _logger.LogInformation(string.Format("{0} - {1} - {2}.", DateTime.Now, nameof(AddCustomerUserAsync), "attempting to add new user"));
+                var user = new User
+                {
+                    FirstName = addNewUserRequest.FirstName,
+                    LastName = addNewUserRequest.LastName,
+                    EmailAddress = addNewUserRequest.EmailAddress,
+                    Password = addNewUserRequest.Password,
+                    Cellphone = addNewUserRequest.Cellphone,
+                    DateCreated = DateTime.Now,
+                    UserTypeID = (int)Enums.UserType.CUSTOMER,
+                    IsAdmin =   false,
+                    IsApproved = false,
+                };
+
+                _goodiesContext.User.Add(user);
+                await _goodiesContext.SaveChangesAsync();
+
+                return user;
+            }
+            catch (Exception ex) 
+            {
+                _logger.LogError(string.Format("{0} - {1} - {2} {3}.", DateTime.Now, nameof(AddCustomerUserAsync), ex.Message,ex.InnerException?.Message));
+                throw new ArgumentException(ex.Message);
+            }
         }
 
     }
