@@ -19,7 +19,7 @@ namespace Goodies.Shop.Api.Controllers
             _logger = logger;
             _userRepository = userRepository;
         }
-        [Route("GetUsers")]
+        [Route("get-users")]
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -39,7 +39,7 @@ namespace Goodies.Shop.Api.Controllers
                 return NoContent();
             }
         }
-        [Route("AddCustomerUser")]
+        [Route("add-new-customer")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
