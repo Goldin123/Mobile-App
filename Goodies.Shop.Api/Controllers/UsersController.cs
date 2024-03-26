@@ -1,5 +1,8 @@
-﻿using Goodies.Shop.Database.Entities;
+﻿using Azure;
+using Goodies.Shop.Database.Entities;
 using Goodies.Shop.Database.Repository.Interface;
+using Goodies.Shop.Model.ApiRequest;
+using Goodies.Shop.Model.ApiResponse;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +19,7 @@ namespace Goodies.Shop.Api.Controllers
             _logger = logger;
             _userRepository = userRepository;
         }
+        [Route("GetUsers")]
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -34,6 +38,25 @@ namespace Goodies.Shop.Api.Controllers
             {
                 return NoContent();
             }
+        }
+        [Route("AddCustomerUser")]
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<User>> AddCustomerUser([FromBody] AddNewUserRequest addNewUserRequest)
+        {
+
+            if (addNewUserRequest != null)
+            {
+                var addCustomer = await _userRepository.AddCustomerUserAsync(addNewUserRequest);
+                return CreatedAtAction(nameof(AddCustomerUser), addCustomer);
+            }
+            else
+            {
+                _logger.LogError(string.Format("{0} - {1} - {2}.", DateTime.Now, nameof(AddCustomerUser), "Please enter valid details"));
+                return StatusCode(StatusCodes.Status500InternalServerError, new Model.ApiResponse.Response { Status = "Error", Message = "Please enter valid details." });
+            }
+            
         }
     }
 }

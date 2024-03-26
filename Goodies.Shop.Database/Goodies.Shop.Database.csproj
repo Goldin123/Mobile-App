@@ -16,4 +16,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Goodies.Shop.Model\Goodies.Shop.Model.csproj" />
+  </ItemGroup>
+
 </Project>

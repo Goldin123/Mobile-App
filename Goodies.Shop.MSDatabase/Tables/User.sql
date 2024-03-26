@@ -23,7 +23,7 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[User]  WITH CHECK ADD  CONSTRAINT [FK_User_UserAddress] FOREIGN KEY([UserAddressID])
+ALTER TABLE [dbo].[User]  WITH NOCHECK ADD  CONSTRAINT [FK_User_UserAddress] FOREIGN KEY([UserAddressID])
 REFERENCES [dbo].[UserAddress] ([UserAddressID])
 GO
 
